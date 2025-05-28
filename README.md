@@ -1,39 +1,17 @@
-# Policy Corpus Clau  
+# Policy corpus
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
-[![CI Status](https://github.com/ClaudiaAgromayor/policy-corpus/actions/workflows/validate.yml/badge.svg)](https://github.com/ClaudiaAgromayor/policy-corpus/actions)  
-🔗 Quick Nav: [Policies](#-policy-catalog) | [Benchmarks](#-benchmarking) | [Contribute](#-contributing)
+This repository stands as a corpus of business policies to support research studies, academic courses and experiments.
+It includes synthetic policies and a catalog of links of real public policies for various business domains.
 
-A curated collection of business policies for research, education, and policy automation development.
+## Motivations
+LLMs are told to bring reasoning capabilities. While they are progressing for more than 2 years in this direction when performing specific tasks, question remains open when automating the decision making of business policies.
+To go beyond intuition or any biais the idea is to measure any solution (LLM, generated code, human choice) to decide in comparison of a ground truth dataset.
 
-## Key Features  
-✔ Standardized policy format (JSON + natural language)  
-✔ Validated Python implementations  
-✔ Synthetic test data generators  
-✔ Ready-to-use benchmark datasets  
-✔ Covers airlines, finance, HR, and insurance  
-
-## Repository Structure 
-/policies
-/airlines # Airline baggage policies
-/financial # Loan/refund policies
-/human-resources # HR policies
-/insurance # Claim policies
-/schema # Validation schemas
-/scripts # Utility scripts
-/tests # Validation tests
-/benchmarks # Performance comparison tools
-
-
-## Quick Start  
-
-1. **Install dependencies**:  
-  ```bash  
-  npm install
-2. **Validate Policies**:
-  npm test
-3. **Run benckmarks**:
-  python benchmarks/compare.py --policy=luggage  
+For synthetic but real life inspired business policies what are the performances of:
+- pure LLM decision making, given a single prompt, a request and the policy,
+- a chain of thoughts involving a sequence or tree of generations
+- a generated code thanks to an LLM
+- other means involving other technics (optimization, genetic algorithms, tensor based logic inference, etc)
 
 ## Policy reference implementation
 For a panel of business domain and use cases, this project proposes data and code to benchmark automated decisions with respect to a business policy expressed in plain text.
@@ -44,19 +22,11 @@ Each policy is described by:
 - a list of decision datasets. They are ready to use as a baseline to measure the performances of any machines (pure LLMs, code generated thanks to LLMs, others) that automate the decision making.  
 
 ## Policy list
-| Policy | Description | Code | Test Cases |  
-|--------|-------------|------|------------|  
-| [Luggage](luggage/luggage_policy.md) | Airline baggage rules | [Python](luggage/impl.py) | [JSON](luggage/tests.json) |  
-| [Time Off](human-resources/time_off.md) | Employee leave | [Python](hr/impl.py) | [CSV](hr/tests.csv) |  
-| [Insurance](insurance/policy.md) | Claim approval | [Python](insurance/impl.py) | [JSON](insurance/tests.json) |  
-| [Loans](loan/policy.md) | Credit decisions | [Python](loan/impl.py) | [CSV](loan/tests.csv) |
-
-## Motivations
-## Research Goals  
-Compare different automation methods:  
-- **Pure LLM decisions** (single prompt)  
-- **LLM-generated code**  
-- **Human-validated implementations**  
+The list of business policies captured in this corpus:
+- [luggage compliance & pricing](luggage/luggage_policy.md)
+- [time off](human-resources/acme_time_off.md)
+- [insurance](insurance/insurance_policy.md)
+- [loan approval](loan/loan_policy.md)
 
 ## How to benchmark your policy automation against a test dataset
 You want to measure quantitatively the performance of your policy automation, then this project is made for you.
@@ -69,5 +39,3 @@ As we are cooking a similar recipe for each policy, the project proposes a commo
 ## How to extend the corpus to your own policies
 If you intend to extend the corpus with a new policy please have a look to this section: [Adding a policy](policy_corpus_extension_docs/README.md)
 
-## License  
-MIT © 2023 [Claudia Agromayor]  

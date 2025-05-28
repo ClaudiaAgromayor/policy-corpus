@@ -1,10 +1,10 @@
 # Policy Corpus Clau  
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
-[![CI Status](https://github.com/ClaudiaAgromayor/policy-corpus/actions/workflows/validate.yml/badge.svg)](https://github.com/ClaudiaAgromayor/policy-corpus/actions)
+[![CI Status](https://github.com/ClaudiaAgromayor/policy-corpus/actions/workflows/validate.yml/badge.svg)](https://github.com/ClaudiaAgromayor/policy-corpus/actions)  
+🔗 Quick Nav: [Policies](#-policy-catalog) | [Benchmarks](#-benchmarking) | [Contribute](#-contributing)
 
-This repository stands as a corpus of business policies to support research studies, academic courses and experiments.
-It includes synthetic policies and a catalog of links of real public policies for various business domains.
+A curated collection of business policies for research, education, and policy automation development.
 
 ## Key Features  
 ✔ Standardized policy format (JSON + natural language)  
@@ -13,24 +13,27 @@ It includes synthetic policies and a catalog of links of real public policies fo
 ✔ Ready-to-use benchmark datasets  
 ✔ Covers airlines, finance, HR, and insurance  
 
-## Repository Structure
+## Repository Structure 
 /policies
-  /airlines        # Airline-specific policies
-  /financial       # Financial service policies
-/schema           # Validation schemas
-/scripts          # Utility scripts
-/tests            # Validation tests
+/airlines # Airline baggage policies
+/financial # Loan/refund policies
+/human-resources # HR policies
+/insurance # Claim policies
+/schema # Validation schemas
+/scripts # Utility scripts
+/tests # Validation tests
+/benchmarks # Performance comparison tools
 
-## Usage
+
 ## Quick Start  
 
 1. **Install dependencies**:  
-```bash  
-npm install
+  ```bash  
+  npm install
 2. **Validate Policies**:
-npm test
+  npm test
 3. **Run benckmarks**:
-python benchmarks/compare.py --policy=luggage  
+  python benchmarks/compare.py --policy=luggage  
 
 ## Policy reference implementation
 For a panel of business domain and use cases, this project proposes data and code to benchmark automated decisions with respect to a business policy expressed in plain text.
